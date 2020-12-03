@@ -15,24 +15,18 @@ testWebP(function (support) {
   }
 });
 
-
-
 (function () {
   const burgerItem = document.querySelector(".burger");
-  const menu = document.querySelector(".nav-link");
-  const menuClose = document.querySelector(".header__nav-close");
-  const menuLinks = document.querySelectorAll(".nav-links");
-  burgerItem.addEventListener("click", () => {
-    menu.classList.add("header__active");
-    console.log('burger')
-  });
-  menuClose.addEventListener("click", () => {
-    menu.classList.remove("header__active");
-  });
-  if (window.innerWidth < 769) {
+  const menu = document.querySelector(".menu");
+  const menuLinks = document.querySelectorAll(".nav-link"); 
+    burgerItem.addEventListener("click", () => {
+      menu.classList.toggle("header__active")
+      burgerItem.classList.toggle("active");
+    });
+    if (window.innerWidth < 769) {
     for (let i = 0; i < menuLinks.length; i += 1) {
       menuLinks[i].addEventListener("click", () => {
-        menu.classList.remove("header__nav_active");
+        menu.classList.remove("header__active");
       });
     }
   }

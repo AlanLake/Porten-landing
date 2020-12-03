@@ -20,21 +20,17 @@ testWebP(function (support) {
 
 (function () {
   var burgerItem = document.querySelector(".burger");
-  var menu = document.querySelector(".nav-link");
-  var menuClose = document.querySelector(".header__nav-close");
-  var menuLinks = document.querySelectorAll(".nav-links");
+  var menu = document.querySelector(".menu");
+  var menuLinks = document.querySelectorAll(".nav-link");
   burgerItem.addEventListener("click", function () {
-    menu.classList.add("header__active");
-    console.log('burger');
-  });
-  menuClose.addEventListener("click", function () {
-    menu.classList.remove("header__active");
+    menu.classList.toggle("header__active");
+    burgerItem.classList.toggle("active");
   });
 
   if (window.innerWidth < 769) {
     for (var i = 0; i < menuLinks.length; i += 1) {
       menuLinks[i].addEventListener("click", function () {
-        menu.classList.remove("header__nav_active");
+        menu.classList.remove("header__active");
       });
     }
   }
