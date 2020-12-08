@@ -17,16 +17,7 @@ body {
   margin: auto;
   height: 100%;
   padding-top: 14px;
-}
-
-.first-block {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 14px;
-}
-
-.second-block {
-  background-color: #0f0f0f;
+  padding-bottom: 10px;
 }
 
 .header__active {
@@ -80,6 +71,12 @@ body {
   background: black;
   border: none;
   color: #969696;
+  transition: 0.5s;
+}
+
+.login-button:hover,
+.login-button:active {
+  color: #ffffff;
 }
 
 .nav {
@@ -508,10 +505,15 @@ body {
   border: none;
   padding: 10px 20px;
   margin: 20px;
+  transition: 0.5s;
 }
 
 .filter-buttons_grid button:nth-child(4) {
   grid-column: span 2;
+}
+
+.filter-buttons_grid button:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .mail {
@@ -544,6 +546,11 @@ body {
   height: 42px;
   color: white;
   border: none;
+  transition: 0.5s;
+}
+
+.mail div button:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .email {

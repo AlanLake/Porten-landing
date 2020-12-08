@@ -17,15 +17,9 @@ body {
   margin: auto;
   height: 100%;
   padding-top: 14px;
+  padding-bottom: 10px;
 }
-.first-block {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 14px;
-}
-.second-block {
-  background-color: #0f0f0f;
-}
+
 .header__active {
   background-color: #0f0f0f;
   transform: translateX(-200%);
@@ -76,6 +70,11 @@ body {
   background: black;
   border: none;
   color: #969696;
+  transition: 0.5s;
+  &:hover,
+  &:active {
+    color: #ffffff;
+  }
 }
 
 .nav {
@@ -509,6 +508,10 @@ body {
     &:nth-child(4) {
       grid-column: span 2;
     }
+    transition: 0.5s;
+    &:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
   }
 }
 
@@ -539,6 +542,10 @@ body {
       height: 42px;
       color: white;
       border: none;
+      transition: 0.5s;
+      &:hover {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
     }
   }
 }
@@ -683,7 +690,7 @@ body {
     position: fixed;
     left: 2%;
     top: 2%;
-    z-index:100;
+    z-index: 100;
   }
 
   .intro {
